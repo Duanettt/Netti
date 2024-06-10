@@ -1,0 +1,6 @@
+﻿  Application.cpp
+  Backend.cpp
+  Renderer.cpp
+  Shader.cpp
+  Generating Code...
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(4,11): error C2757: 'Application': a symbol with this name already exists and therefore this name cannot be used as a namespace name

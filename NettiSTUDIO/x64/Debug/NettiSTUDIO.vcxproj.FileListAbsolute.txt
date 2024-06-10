@@ -1,0 +1,2 @@
+C:\Users\duain\Documents\NettiSTUDIO\x64\Debug\glfw3.dll
+C:\Users\duain\Documents\NettiSTUDIO\NettiSTUDIO\x64\Debug\NettiSTU.88ADEBE2.Up2Date
