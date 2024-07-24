@@ -8,11 +8,13 @@ extern int width;
 extern int height;
 extern const char* title;
 
+
 namespace GLFW
 {
 		void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 		bool InitializeWindow(const unsigned int& w, const unsigned int& h, const char* t);
 		void ProcessInput();
+		void ProcessInput(float mixValue);
 		bool WindowIsOpen();
 
 		void Terminate();

@@ -11,58 +11,31 @@
       "RelativeMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|solutionrelative:src\\Renderer\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|C:\\Users\\duain\\Documents\\NettiSTUDIO\\res\\vertexShader.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|solutionrelative:res\\vertexShader.vs||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|C:\\Users\\duain\\Documents\\NettiSTUDIO\\res\\shaders\\vertexShader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|solutionrelative:res\\shaders\\vertexShader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Backend\\GLFW.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|solutionrelative:src\\Backend\\GLFW.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|C:\\Users\\duain\\Documents\\NettiSTUDIO\\res\\shaders\\fragmentShader.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|solutionrelative:res\\shaders\\fragmentShader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Backend\\Backend.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|solutionrelative:src\\Backend\\Backend.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Renderer\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|solutionrelative:src\\Renderer\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Backend\\Backend.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|solutionrelative:src\\Backend\\Backend.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Renderer\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{72DFEF99-C423-42F6-BEF2-E76D50F6B298}|NettiSTUDIO.vcxproj|solutionrelative:src\\Renderer\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 293,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Renderer.cpp",
-              "DocumentMoniker": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Renderer\\Renderer.cpp",
-              "RelativeDocumentMoniker": "src\\Renderer\\Renderer.cpp",
-              "ToolTip": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Renderer\\Renderer.cpp",
-              "RelativeToolTip": "src\\Renderer\\Renderer.cpp",
-              "ViewState": "AQIAADEAAAAAAAAAAAAAAEEAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-19T23:26:31.648Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "vertexShader.vs",
-              "DocumentMoniker": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\res\\vertexShader.vs",
-              "RelativeDocumentMoniker": "res\\vertexShader.vs",
-              "ToolTip": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\res\\vertexShader.vs",
-              "RelativeToolTip": "res\\vertexShader.vs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-05-31T23:10:06.417Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -71,60 +44,89 @@
               "RelativeDocumentMoniker": "src\\Renderer\\Renderer.h",
               "ToolTip": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Renderer\\Renderer.h",
               "RelativeToolTip": "src\\Renderer\\Renderer.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-19T23:26:33.699Z",
+              "WhenOpened": "2024-07-24T21:21:37.29Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GLFW.h",
-              "DocumentMoniker": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Backend\\GLFW.h",
-              "RelativeDocumentMoniker": "src\\Backend\\GLFW.h",
-              "ToolTip": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Backend\\GLFW.h",
-              "RelativeToolTip": "src\\Backend\\GLFW.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-28T22:40:03.889Z"
+              "Title": "fragmentShader.frag",
+              "DocumentMoniker": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\res\\shaders\\fragmentShader.frag",
+              "RelativeDocumentMoniker": "res\\shaders\\fragmentShader.frag",
+              "ToolTip": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\res\\shaders\\fragmentShader.frag",
+              "RelativeToolTip": "res\\shaders\\fragmentShader.frag",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-24T20:31:58.476Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Backend.cpp",
-              "DocumentMoniker": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Backend\\Backend.cpp",
-              "RelativeDocumentMoniker": "src\\Backend\\Backend.cpp",
-              "ToolTip": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Backend\\Backend.cpp",
-              "RelativeToolTip": "src\\Backend\\Backend.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "Renderer.cpp",
+              "DocumentMoniker": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Renderer\\Renderer.cpp",
+              "RelativeDocumentMoniker": "src\\Renderer\\Renderer.cpp",
+              "ToolTip": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Renderer\\Renderer.cpp",
+              "RelativeToolTip": "src\\Renderer\\Renderer.cpp",
+              "ViewState": "AQIAAO4AAAAAAAAAAAAAACABAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-28T23:04:20.4Z"
+              "WhenOpened": "2024-07-24T20:29:12.329Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Backend.h",
-              "DocumentMoniker": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Backend\\Backend.h",
-              "RelativeDocumentMoniker": "src\\Backend\\Backend.h",
-              "ToolTip": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Backend\\Backend.h",
-              "RelativeToolTip": "src\\Backend\\Backend.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Shader.cpp",
+              "DocumentMoniker": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Renderer\\Shader.cpp",
+              "RelativeDocumentMoniker": "src\\Renderer\\Shader.cpp",
+              "ToolTip": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Renderer\\Shader.cpp",
+              "RelativeToolTip": "src\\Renderer\\Shader.cpp",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-24T20:27:31.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Shader.h",
+              "DocumentMoniker": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Renderer\\Shader.h",
+              "RelativeDocumentMoniker": "src\\Renderer\\Shader.h",
+              "ToolTip": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\src\\Renderer\\Shader.h",
+              "RelativeToolTip": "src\\Renderer\\Shader.h",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAHAAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-28T23:04:19.503Z"
+              "WhenOpened": "2024-07-24T20:27:26.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "vertexShader.vert",
+              "DocumentMoniker": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\res\\shaders\\vertexShader.vert",
+              "RelativeDocumentMoniker": "res\\shaders\\vertexShader.vert",
+              "ToolTip": "C:\\Users\\duain\\Documents\\NettiSTUDIO\\res\\shaders\\vertexShader.vert",
+              "RelativeToolTip": "res\\shaders\\vertexShader.vert",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-24T20:27:15.912Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 99,
+          "DockedWidth": 921,
           "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

@@ -24,6 +24,7 @@
     <ClCompile Include="src\Backend\GLFW.cpp" />
     <ClCompile Include="src\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Renderer\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Application.h" />
@@ -31,9 +32,11 @@
     <ClInclude Include="src\Backend\GLFW.h" />
     <ClInclude Include="src\Renderer\Renderer.h" />
     <ClInclude Include="src\Renderer\Shader.h" />
+    <ClInclude Include="src\Renderer\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\vertexShader.vs" />
+    <None Include="res\shaders\fragmentShader.frag" />
+    <None Include="res\shaders\vertexShader.vert" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

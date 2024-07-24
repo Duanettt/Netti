@@ -5,7 +5,16 @@ int width;
 int height;
 const char* title;
 
+
 void GLFW::ProcessInput()
+{
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    {
+        glfwSetWindowShouldClose(window, true);
+    };
+}
+
+void GLFW::ProcessInput(float mixValue)
 {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
     {
