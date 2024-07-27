@@ -19,20 +19,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Renderer\Mesh.cpp" />
+    <ClCompile Include="src\Renderer\Cube.cpp" />
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\Backend\Backend.cpp" />
     <ClCompile Include="src\Backend\GLFW.cpp" />
     <ClCompile Include="src\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Renderer\Shader.cpp" />
     <ClCompile Include="src\Renderer\stb_image.cpp" />
+    <ClCompile Include="src\Renderer\utils\VertexData.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Renderer\Mesh.h" />
+    <ClInclude Include="src\Renderer\Cube.h" />
     <ClInclude Include="src\Application.h" />
     <ClInclude Include="src\Backend\Backend.h" />
     <ClInclude Include="src\Backend\GLFW.h" />
     <ClInclude Include="src\Renderer\Renderer.h" />
     <ClInclude Include="src\Renderer\Shader.h" />
     <ClInclude Include="src\Renderer\stb_image.h" />
+    <ClInclude Include="src\Renderer\utils\VertexData.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\fragmentShader.frag" />

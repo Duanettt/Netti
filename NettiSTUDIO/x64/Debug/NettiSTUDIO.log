@@ -1,5 +1,4 @@
-﻿  Renderer.cpp
-C:\Users\duain\Documents\NettiSTUDIO\src\Renderer\Renderer.cpp(276,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+﻿  Application.cpp
   NettiSTUDIO.vcxproj -> C:\Users\duain\Documents\NettiSTUDIO\x64\Debug\NettiSTUDIO.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

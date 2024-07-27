@@ -8,7 +8,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-
+#include "../Renderer/Cube.h"
 
 namespace Renderer 
 {
@@ -19,9 +19,10 @@ namespace Renderer
     unsigned int CreateVAO(const float* vertices, size_t verticesSize, int multiplier);
 
     unsigned int LoadTexture(const char* path, GLenum format);
+    
 
     void Render(Shader ourShader, unsigned int& VAO, unsigned int& texture);
-    void Render(Shader ourShader, unsigned int& VAO, unsigned int& texture1, unsigned int texture2);
+    void Render(Shader ourShader, unsigned int& VAO, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth);
     void Render(Shader ourShader, unsigned int& VAO); 
 
 
