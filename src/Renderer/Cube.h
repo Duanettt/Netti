@@ -1,4 +1,5 @@
 #pragma once
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <stb_image.h>
@@ -15,13 +16,22 @@ class Cube
 public:
 
     unsigned int VAO, VBO;
+    glm::mat4 _model = glm::mat4(1.0f);
 
     Cube()
     {
-        createVAO();
+        uploadVertexData();
     }
 
     void Draw();
+
+    void applyTranslate(glm::vec3 position);
+
+    void applyRotate(glm::vec3 rotation, float deg);
+
+    void applyScaling(glm::vec3 scale);
+
+    glm::mat4 getModelMatrix();
 
     void Transformations(Shader& ourShader);
 
@@ -71,7 +81,7 @@ private:
     };
 
 
-    void createVAO();
+    void uploadVertexData();
 
 };
 
