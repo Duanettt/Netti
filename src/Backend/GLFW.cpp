@@ -5,13 +5,48 @@ int width;
 int height;
 const char* title;
 
-
-void GLFW::ProcessInput()
+void GLFW::ProcessInput(Camera& camera, float& deltaTime)
 {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
     {
         glfwSetWindowShouldClose(window, true);
-    };
+    }
+    const float cameraSpeed = 0.05f; // adjust accordinglyw
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+    {
+        camera.ProcessKeyboard(FORWARD, deltaTime);
+    }
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+    {
+        camera.ProcessKeyboard(BACKWARD, deltaTime);
+    }
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+    {
+        camera.ProcessKeyboard(LEFT, deltaTime);
+    }
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+    {
+        camera.ProcessKeyboard(RIGHT, deltaTime);
+    }
+    if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
+    {
+        camera.ProcessKeyboard(UP, deltaTime);
+    }
+    if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
+    {
+        camera.ProcessKeyboard(DOWN, deltaTime);
+    }
+
+
+    // Camera Speed Statements
+    if (glfwGetKey(window, GLFW_KEY_Z) == GLFW_PRESS)
+    {
+        camera.ProcessKeyboard(DECREASE, deltaTime);
+    }
+    if (glfwGetKey(window, GLFW_KEY_C) == GLFW_PRESS)
+    {
+        camera.ProcessKeyboard(INCREASE, deltaTime);
+    }
 }
 
 void GLFW::ProcessInput(float mixValue)
@@ -21,6 +56,8 @@ void GLFW::ProcessInput(float mixValue)
         glfwSetWindowShouldClose(window, true);
     }
 }
+
+
 
 
 void GLFW::Terminate()
@@ -70,6 +107,8 @@ bool GLFW::InitializeWindow(const unsigned int& w,const unsigned int& h, const c
 
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
         std::cout << "Failed to initialize GLAD" << std::endl;

@@ -118,11 +118,11 @@ void Renderer::Render(Shader ourShader, unsigned int& VAO, unsigned int& texture
     glClearColor(0.17f, 0.17f, 0.17f, 0.17f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     // Render your objects here
-    /*float timeValue = glfwGetTime();
+/*    float timeValue = glfwGetTime();
     float greenValue = (sin(timeValue) / 2.0f) + 0.5f;
     int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
 
-    glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);*/
+    glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f); */
 
     ourShader.use();
     glBindTexture(GL_TEXTURE_2D, texture);
@@ -132,7 +132,7 @@ void Renderer::Render(Shader ourShader, unsigned int& VAO, unsigned int& texture
 
 }
 
-void Renderer::Render(Shader ourShader, Cube& cube, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth)
+void Renderer::Render(Shader ourShader, Mesh& mesh, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, glm::vec3 cameraPos, glm::vec3 cameraFront, glm::vec3 cameraUp)
 {
     glClearColor(0.17f, 0.17f, 0.17f, 0.17f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -144,8 +144,13 @@ void Renderer::Render(Shader ourShader, Cube& cube, unsigned int& texture1, unsi
 
 
     // View matrix - Transforms vertex coordinates from world space to camera/view space using the view matrix
-    glm::mat4 view = glm::mat4(1.0f);
-    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+
+    glm::mat4 view;
+    const float radius = 10.0f;
+    float camX = sin(glfwGetTime()) * radius;
+    float camZ = cos(glfwGetTime()) * radius;
+    view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+
 
     // Transforms vertex coordinates from view space to clipping space.
     glm::mat4 projection = glm::mat4(1.0f);
@@ -157,14 +162,14 @@ void Renderer::Render(Shader ourShader, Cube& cube, unsigned int& texture1, unsi
 
     ourShader.use();
 
-    cube.Transformations(ourShader);
-    cube.Draw();
+    mesh.Transformations(ourShader);
+    mesh.Draw(GL_TRIANGLES, 6, GL_UNSIGNED_INT);
 
 
 }
 
 
-void Renderer::Render(Shader ourShader, std::vector<Cube> cubes, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth)
+void Renderer::Render(Shader ourShader, std::vector<Mesh> meshes, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera)
 {
     glClearColor(0.17f, 0.17f, 0.17f, 0.17f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -176,8 +181,8 @@ void Renderer::Render(Shader ourShader, std::vector<Cube> cubes, unsigned int& t
 
 
     // View matrix - Transforms vertex coordinates from world space to camera/view space using the view matrix
-    glm::mat4 view = glm::mat4(1.0f);
-    view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+    glm::mat4 view;
+    view = camera.GetViewMatrix();
 
     // Transforms vertex coordinates from view space to clipping space.
     glm::mat4 projection = glm::mat4(1.0f);
@@ -190,10 +195,10 @@ void Renderer::Render(Shader ourShader, std::vector<Cube> cubes, unsigned int& t
     ourShader.use();
 
 
-    for (Cube& cube : cubes)
+    for (Mesh& mesh : meshes)
     {
-        cube.Transformations(ourShader);
-        cube.Draw();
+        mesh.Transformations(ourShader);
+        mesh.Draw();
     }
 
 

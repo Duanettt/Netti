@@ -9,79 +9,86 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "Shader.h"
 #include "Renderer.h"
-#include <iostream>
+#include "Mesh.h"
 
-class Cube
+#include "utils/Data.h"
+#include <iostream>
+#include <vector>
+
+
+class Cube : public Mesh
 {
 public:
 
-    unsigned int VAO, VBO;
     glm::mat4 _model = glm::mat4(1.0f);
 
-    Cube()
+    Cube() : Mesh()
     {
-        uploadVertexData();
+        std::vector<Vertex> vertices = {
+            // positions          // normals         // texture coords
+            { glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 0.0f) },
+            { glm::vec3(0.5f, -0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 0.0f) },
+            { glm::vec3(0.5f,  0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 1.0f) },
+            { glm::vec3(0.5f,  0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 1.0f) },
+            { glm::vec3(-0.5f,  0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 1.0f) },
+            { glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 0.0f) },
+
+            { glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 0.0f) },
+            { glm::vec3(0.5f, -0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 0.0f) },
+            { glm::vec3(0.5f,  0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 1.0f) },
+            { glm::vec3(0.5f,  0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 1.0f) },
+            { glm::vec3(-0.5f,  0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 1.0f) },
+            { glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 0.0f) },
+
+            { glm::vec3(-0.5f,  0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 0.0f) },
+            { glm::vec3(-0.5f,  0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 1.0f) },
+            { glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 1.0f) },
+            { glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 1.0f) },
+            { glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 0.0f) },
+            { glm::vec3(-0.5f,  0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 0.0f) },
+
+            { glm::vec3(0.5f,  0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 0.0f) },
+            { glm::vec3(0.5f,  0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 1.0f) },
+            { glm::vec3(0.5f, -0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 1.0f) },
+            { glm::vec3(0.5f, -0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 1.0f) },
+            { glm::vec3(0.5f, -0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 0.0f) },
+            { glm::vec3(0.5f,  0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 0.0f) },
+
+            { glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 1.0f) },
+            { glm::vec3(0.5f, -0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 1.0f) },
+            { glm::vec3(0.5f, -0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 0.0f) },
+            { glm::vec3(0.5f, -0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 0.0f) },
+            { glm::vec3(-0.5f, -0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 0.0f) },
+            { glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 1.0f) },
+
+            { glm::vec3(-0.5f,  0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 1.0f) },
+            { glm::vec3(0.5f,  0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 1.0f) },
+            { glm::vec3(0.5f,  0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 0.0f) },
+            { glm::vec3(0.5f,  0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(1.0f, 0.0f) },
+            { glm::vec3(-0.5f,  0.5f,  0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 1.0f) },
+            { glm::vec3(-0.5f,  0.5f, -0.5f), glm::vec3(0.0f), glm::vec2(0.0f, 1.0f) },
+        };
+
+        std::vector<unsigned int> indices = {
+            0, 1, 2, 2, 3, 0,   // Front face
+            4, 5, 6, 6, 7, 4,   // Back face
+            8, 9, 10, 10, 11, 8, // Left face
+            12, 13, 14, 14, 15, 12, // Right face
+            16, 17, 18, 18, 19, 16, // Top face
+            20, 21, 22, 22, 23, 20  // Bottom face
+        };
+
+
+        uploadVertexData(vertices, indices);
     }
 
-    void Draw();
-
-    void applyTranslate(glm::vec3 position);
-
-    void applyRotate(glm::vec3 rotation, float deg);
-
-    void applyScaling(glm::vec3 scale);
-
-    glm::mat4 getModelMatrix();
-
-    void Transformations(Shader& ourShader);
-
+    void Draw()
+    {
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+        glBindVertexArray(0);
+    }
 private:
-    float vertices[36 * 5] = {
-    -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-     0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
-     0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-     0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-    -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-    -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-
-    -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-     0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-     0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-     0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-    -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,
-    -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-
-    -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-    -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-    -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-    -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-    -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-    -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-
-     0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-     0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-     0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-     0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-     0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-     0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-
-    -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-     0.5f, -0.5f, -0.5f,  1.0f, 1.0f,
-     0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-     0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-    -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-    -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-
-    -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-     0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-     0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-     0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-    -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
-    -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
-    };
-
-
-    void uploadVertexData();
 
 };
 

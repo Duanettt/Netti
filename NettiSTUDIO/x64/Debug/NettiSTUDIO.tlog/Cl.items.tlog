@@ -1,3 +1,5 @@
+C:\Users\duain\Documents\NettiSTUDIO\src\Renderer\Camera.cpp;C:\Users\duain\Documents\NettiSTUDIO\NettiSTUDIO\x64\Debug\Camera.obj
+C:\Users\duain\Documents\NettiSTUDIO\src\Renderer\Quad.cpp;C:\Users\duain\Documents\NettiSTUDIO\NettiSTUDIO\x64\Debug\Quad.obj
 C:\Users\duain\Documents\NettiSTUDIO\src\Renderer\Mesh.cpp;C:\Users\duain\Documents\NettiSTUDIO\NettiSTUDIO\x64\Debug\Mesh.obj
 C:\Users\duain\Documents\NettiSTUDIO\src\Renderer\Cube.cpp;C:\Users\duain\Documents\NettiSTUDIO\NettiSTUDIO\x64\Debug\Cube.obj
 C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp;C:\Users\duain\Documents\NettiSTUDIO\NettiSTUDIO\x64\Debug\Application.obj
@@ -6,4 +8,4 @@ C:\Users\duain\Documents\NettiSTUDIO\src\Backend\GLFW.cpp;C:\Users\duain\Documen
 C:\Users\duain\Documents\NettiSTUDIO\src\Renderer\Renderer.cpp;C:\Users\duain\Documents\NettiSTUDIO\NettiSTUDIO\x64\Debug\Renderer.obj
 C:\Users\duain\Documents\NettiSTUDIO\src\Renderer\Shader.cpp;C:\Users\duain\Documents\NettiSTUDIO\NettiSTUDIO\x64\Debug\Shader.obj
 C:\Users\duain\Documents\NettiSTUDIO\src\Renderer\stb_image.cpp;C:\Users\duain\Documents\NettiSTUDIO\NettiSTUDIO\x64\Debug\stb_image.obj
-C:\Users\duain\Documents\NettiSTUDIO\src\Renderer\utils\VertexData.cpp;C:\Users\duain\Documents\NettiSTUDIO\NettiSTUDIO\x64\Debug\VertexData.obj
+C:\Users\duain\Documents\NettiSTUDIO\src\Renderer\utils\Data.cpp;C:\Users\duain\Documents\NettiSTUDIO\NettiSTUDIO\x64\Debug\Data.obj
