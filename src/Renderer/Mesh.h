@@ -10,6 +10,7 @@
 
 #include "utils/Data.h"
 #include "Shader.h"
+#include "../Physics/Physics.h"
 
 
 class Mesh
@@ -20,6 +21,8 @@ public:
 	virtual ~Mesh() = default;
 
 	glm::mat4 _model = glm::mat4(1.0f);
+
+	Physics physics;
 
 	Mesh()
 	{
@@ -42,6 +45,10 @@ public:
 
 	void applyScaling(glm::vec3 scale);
 
+	void applyGravity();
+
+	void updatePhysics(float& deltaTime);
+	
 	void Draw();
 
 	void Draw(GLenum drawMode, GLsizei numOfIndices, GLenum indicesType);

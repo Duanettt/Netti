@@ -15,6 +15,21 @@ void Mesh::applyScaling(glm::vec3 scale)
     _model = glm::scale(_model, scale);
 }
 
+void Mesh::applyGravity()
+{
+    physics.applyForce(glm::vec3(0.0f, -0.98f, 0.0f));
+
+    glm::vec3 newPosition = physics.getPosition();
+
+    _model = glm::translate(_model, newPosition);
+}
+
+void Mesh::updatePhysics(float& deltaTime)
+{
+    physics.update(deltaTime);
+
+}
+
 void Mesh::Draw()
 {
     glBindVertexArray(VAO);

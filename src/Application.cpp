@@ -68,6 +68,7 @@ int main()
     {
         Cube cube;
         cube.applyTranslate(cubePositions[i]);
+        cube.applyGravity();
         meshes.push_back(cube);
         i++;
     } 
@@ -83,6 +84,18 @@ int main()
     //cube.applyTranslate(position);
 
     //cube2.applyTranslate(cube2Position);
+    glm::vec3 pCubePosition = glm::vec3(0.0f);
+    glm::vec3 pCubeVelocity = glm::vec3(0.1f);
+    glm::vec3 pCubeAcceleration = glm::vec3(0.5f);
+    float pCubeMass = 1.0f;
+
+    for(Mesh& mesh : meshes)
+    {
+        mesh.physics.setPosition(pCubePosition);
+        mesh.physics.setAcceleration(pCubeAcceleration);
+        mesh.physics.setVelocity(pCubeVelocity);
+        mesh.physics.setMass(pCubeMass);
+    }
 
     while (GLFW::WindowIsOpen())
     {
@@ -96,10 +109,16 @@ int main()
         Renderer::RunEvents();
 
 
-       /* Renderer::Render(ourShader, cube, texture1, texture2, 800, 600);
-        Renderer::Render(ourShader, cube2, texture1, texture2, 800, 600); */
+        for (Mesh& mesh : meshes)
+        {
+            mesh.applyGravity();
+            mesh.updatePhysics(deltaTime);
+        }
 
-        Renderer::Render(ourShader, meshes, texture1, texture2, 800, 600, camera);
+        //Renderer::Render(ourShader, cube, texture1, texture2, 800, 600, camera);
+        //Renderer::Render(ourShader, cube2, texture1, texture2, 800, 600); 
+
+        Renderer::Render(ourShader, deltaTime, meshes, texture1, texture2, 800, 600, camera);
 
     }
 }

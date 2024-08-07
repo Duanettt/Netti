@@ -28,10 +28,9 @@ namespace Renderer
 
     void Render(Shader ourShader, unsigned int& VAO, unsigned int& texture);
 
-    void Render(Shader ourShader, Mesh& mesh, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, glm::vec3 cameraPos, glm::vec3 cameraFront, glm::vec3 cameraUp);
-
+    void Render(Shader ourShader, Mesh& mesh, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera);
     void Render(Shader ourShader, Mesh& mesh, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth);
 
-    void Render(Shader ourShader, std::vector<Mesh> meshes, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera);
+    void Render(Shader ourShader, float& deltaTime,std::vector<Mesh> meshes, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera);
 
 }

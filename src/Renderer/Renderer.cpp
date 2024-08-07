@@ -132,7 +132,7 @@ void Renderer::Render(Shader ourShader, unsigned int& VAO, unsigned int& texture
 
 }
 
-void Renderer::Render(Shader ourShader, Mesh& mesh, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, glm::vec3 cameraPos, glm::vec3 cameraFront, glm::vec3 cameraUp)
+void Renderer::Render(Shader ourShader, Mesh& mesh, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera)
 {
     glClearColor(0.17f, 0.17f, 0.17f, 0.17f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -146,10 +146,7 @@ void Renderer::Render(Shader ourShader, Mesh& mesh, unsigned int& texture1, unsi
     // View matrix - Transforms vertex coordinates from world space to camera/view space using the view matrix
 
     glm::mat4 view;
-    const float radius = 10.0f;
-    float camX = sin(glfwGetTime()) * radius;
-    float camZ = cos(glfwGetTime()) * radius;
-    view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+    view = camera.GetViewMatrix();
 
 
     // Transforms vertex coordinates from view space to clipping space.
@@ -163,13 +160,12 @@ void Renderer::Render(Shader ourShader, Mesh& mesh, unsigned int& texture1, unsi
     ourShader.use();
 
     mesh.Transformations(ourShader);
-    mesh.Draw(GL_TRIANGLES, 6, GL_UNSIGNED_INT);
-
+    mesh.Draw();
 
 }
 
 
-void Renderer::Render(Shader ourShader, std::vector<Mesh> meshes, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera)
+void Renderer::Render(Shader ourShader, float& deltaTime,std::vector<Mesh> meshes, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera)
 {
     glClearColor(0.17f, 0.17f, 0.17f, 0.17f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

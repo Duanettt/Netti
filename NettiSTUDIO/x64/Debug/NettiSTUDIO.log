@@ -1,17 +1,10 @@
 ﻿  Application.cpp
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(113,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(114,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(118,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(119,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(120,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(121,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  GLFW.cpp
-  Camera.cpp
-  Cube.cpp
-  Renderer.cpp
-C:\Users\duain\Documents\NettiSTUDIO\src\Renderer\Renderer.cpp(150,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Renderer\Renderer.cpp(151,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(132,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(133,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(137,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(138,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(139,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(140,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   NettiSTUDIO.vcxproj -> C:\Users\duain\Documents\NettiSTUDIO\x64\Debug\NettiSTUDIO.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

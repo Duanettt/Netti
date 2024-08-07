@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Physics\Physics.cpp" />
     <ClCompile Include="src\Renderer\Camera.cpp" />
     <ClCompile Include="src\Renderer\Quad.cpp" />
     <ClCompile Include="src\Renderer\Mesh.cpp" />
@@ -32,6 +33,7 @@
     <ClCompile Include="src\Renderer\utils\Data.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Physics\Physics.h" />
     <ClInclude Include="src\Renderer\Camera.h" />
     <ClInclude Include="src\Renderer\Quad.h" />
     <ClInclude Include="src\Renderer\Mesh.h" />
