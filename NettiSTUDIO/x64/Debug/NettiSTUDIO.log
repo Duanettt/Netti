@@ -1,10 +1,13 @@
 ﻿  Application.cpp
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(207,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(208,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(212,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(213,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(214,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(215,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(211,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(212,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(216,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(217,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(218,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(219,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Cube.cpp
+  Renderer.cpp
+  Generating Code...
   NettiSTUDIO.vcxproj -> C:\Users\duain\Documents\NettiSTUDIO\x64\Debug\NettiSTUDIO.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

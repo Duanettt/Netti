@@ -34,14 +34,14 @@ void Mesh::updatePhysics(float& deltaTime)
 
 void Mesh::Draw()
 {
-    glBindVertexArray(VAO);
+    glBindVertexArray(this->VAO);
     glDrawArrays(GL_TRIANGLES, 0, 36);
     glBindVertexArray(0);
 }
 
 void Mesh::Draw(GLenum drawMode, GLsizei numOfIndices, GLenum indicesType)
 {
-    glBindVertexArray(VAO);
+    glBindVertexArray(this->VAO);
     glDrawElements(drawMode, numOfIndices, indicesType, 0);
     glBindVertexArray(0);
 }

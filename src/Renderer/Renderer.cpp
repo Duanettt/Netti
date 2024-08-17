@@ -164,8 +164,59 @@ void Renderer::Render(Shader ourShader, Mesh& mesh, unsigned int& texture1, unsi
 
 }
 
+void Renderer::Render(Shader ourShader, Shader lightCubeShader, float& deltaTime, std::vector<Mesh> meshes, Cube lightCube, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera)
+{
+    glClearColor(0.17f, 0.17f, 0.17f, 0.17f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-void Renderer::Render(Shader ourShader, float& deltaTime,std::vector<Mesh> meshes, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera)
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, texture1);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, texture2);
+
+
+    // View matrix - Transforms vertex coordinates from world space to camera/view space using the view matrix
+    glm::mat4 view;
+    view = camera.GetViewMatrix();
+
+    // Transforms vertex coordinates from view space to clipping space.
+    glm::mat4 projection = glm::mat4(1.0f);
+    // We divide 800/600 to keep the same aspect ratio for each vertex coordinate reducing improportions.
+    projection = glm::perspective(glm::radians(45.0f), (float)screenHeight / (float)screenWidth, 0.1f, 100.0f);
+
+    // Get's the lights position.
+    glm::vec3 lightPos = lightCube.getPosition();
+
+    ourShader.use();
+    // Whenever we are setting values within our shader we must use it, since like before it caused strange behaviour.
+    ourShader.setMat4("view", view);
+    ourShader.setMat4("projection", projection);
+
+    ourShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
+    ourShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
+    ourShader.setVec3("lightPos", lightPos);
+    ourShader.setVec3("viewPos", camera.Position);
+
+    for (Mesh& mesh : meshes)
+    {
+        mesh.Transformations(ourShader);
+        mesh.Draw();
+    }
+
+    lightCubeShader.use();
+
+    lightCubeShader.setMat4("view", view);
+    lightCubeShader.setMat4("projection", projection);
+
+    lightCube.applyScaling(glm::vec3(0.2f));
+
+    lightCube.Transformations(lightCubeShader);
+    lightCube.Draw();
+
+}
+
+
+/* void Renderer::Render(Shader ourShader, float& deltaTime, std::vector<Mesh> meshes, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera)
 {
     glClearColor(0.17f, 0.17f, 0.17f, 0.17f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -190,6 +241,9 @@ void Renderer::Render(Shader ourShader, float& deltaTime,std::vector<Mesh> meshe
 
     ourShader.use();
 
+    ourShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
+    ourShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
+
 
     for (Mesh& mesh : meshes)
     {
@@ -198,4 +252,4 @@ void Renderer::Render(Shader ourShader, float& deltaTime,std::vector<Mesh> meshe
     }
 
 
-}
+} */

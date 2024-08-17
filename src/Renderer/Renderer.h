@@ -15,6 +15,7 @@
 // Forward declarations - help to tell Mr.Compiler that this class does exist within our codebase.
 class Cube;
 
+
 namespace Renderer 
 {
     void RunEvents();
@@ -28,6 +29,6 @@ namespace Renderer
     // Overloaded Render Functions
     void Render(Shader ourShader, unsigned int& VAO, unsigned int& texture);
     void Render(Shader ourShader, Mesh& mesh, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera);
-    void Render(Shader ourShader, float& deltaTime,std::vector<Mesh> meshes, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera);
+    void Render(Shader ourShader, Shader lightCubeShader, float& deltaTime,std::vector<Mesh> meshes, Cube lightCube,unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera);
 
 }

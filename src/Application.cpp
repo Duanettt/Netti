@@ -63,6 +63,8 @@ int main()
     Shader ourShader("./res/shaders/vertexShader.vert", "./res/shaders/fragmentShader.frag");
     Shader lightCubeShader("./res/shaders/lightCubeShader.vert", "./res/shaders/lightCubeShader.frag");
 
+    Cube lightCube;
+
     glEnable(GL_DEPTH_TEST);
 
 
@@ -101,6 +103,8 @@ int main()
         } 
 
     bool buttonIsPressed = false;
+
+    lightCube.applyTranslate(glm::vec3(0.0f, 2.0f, 0.0f));
 
     while (GLFW::WindowIsOpen())
     {
@@ -187,7 +191,7 @@ int main()
         //Renderer::Render(ourShader, cube, texture1, texture2, 800, 600, camera);
         //Renderer::Render(ourShader, cube2, texture1, texture2, 800, 600); 
 
-        Renderer::Render(ourShader, deltaTime, meshes, texture1, texture2, 800, 600, camera);
+        Renderer::Render(ourShader, lightCubeShader, deltaTime, meshes, lightCube,texture1, texture2, 800, 600, camera);
 
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -202,7 +206,7 @@ int main()
 void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 {
 
-    if (firstMouse)
+    if (firstMouse || isFPSmode)
     {
         lastX = xpos;
         lastY = ypos;
