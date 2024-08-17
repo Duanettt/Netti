@@ -1,10 +1,10 @@
 ﻿  Application.cpp
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(132,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(133,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(137,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(138,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(139,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(140,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(207,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(208,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(212,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(213,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(214,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\duain\Documents\NettiSTUDIO\src\Application.cpp(215,13): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   NettiSTUDIO.vcxproj -> C:\Users\duain\Documents\NettiSTUDIO\x64\Debug\NettiSTUDIO.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

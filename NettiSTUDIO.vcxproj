@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\imgui_impl_glfw.cpp" />
+    <ClCompile Include="src\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\Physics\Physics.cpp" />
     <ClCompile Include="src\Renderer\Camera.cpp" />
     <ClCompile Include="src\Renderer\Quad.cpp" />
@@ -33,11 +35,14 @@
     <ClCompile Include="src\Renderer\utils\Data.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\imgui_impl_glfw.h" />
+    <ClInclude Include="src\imgui_impl_opengl3.h" />
+    <ClInclude Include="src\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="src\Physics\Physics.h" />
     <ClInclude Include="src\Renderer\Camera.h" />
     <ClInclude Include="src\Renderer\Quad.h" />
     <ClInclude Include="src\Renderer\Mesh.h" />
-    <ClInclude Include="src\Renderer\Cube.h" />
+    <ClInclude Include="src\Renderer\Cube.hpp" />
     <ClInclude Include="src\Application.h" />
     <ClInclude Include="src\Backend\Backend.h" />
     <ClInclude Include="src\Backend\GLFW.h" />
@@ -48,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\fragmentShader.frag" />
+    <None Include="res\shaders\lightCubeShader.frag" />
+    <None Include="res\shaders\lightCubeShader.vert" />
     <None Include="res\shaders\vertexShader.vert" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

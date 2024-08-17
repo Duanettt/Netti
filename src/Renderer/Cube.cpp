@@ -1,3 +1,5 @@
-#include "Cube.h"
+#include "Cube.hpp"
+
+int Cube::cubeCounter = 0;
 
 

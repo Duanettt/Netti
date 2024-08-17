@@ -15,7 +15,7 @@
 class Quad : public Mesh
 {
 public:
-	Quad() : Mesh()
+	Quad() : Mesh("Quad")
 	{
         std::vector<Vertex> vertices = {
             // positions         // normals (placeholders)  // texture coords

@@ -2,6 +2,8 @@
 
 void Mesh::applyTranslate(glm::vec3 position)
 {
+    this->position = position;
+
     _model = glm::translate(_model, position);
 }
 
@@ -47,6 +49,11 @@ void Mesh::Draw(GLenum drawMode, GLsizei numOfIndices, GLenum indicesType)
 glm::mat4 Mesh::getModelMatrix()
 {
     return Mesh::_model;
+}
+
+glm::vec3 Mesh::getPosition()
+{
+    return position;
 }
 
 void Mesh::Transformations(Shader& ourShader)

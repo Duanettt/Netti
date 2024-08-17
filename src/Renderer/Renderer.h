@@ -8,7 +8,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include "../Renderer/Cube.h"
+#include "../Renderer/Cube.hpp"
 #include <vector>
 #include "Mesh.h"
 
@@ -25,12 +25,9 @@ namespace Renderer
 
     unsigned int LoadTexture(const char* path, GLenum format);
     
-
+    // Overloaded Render Functions
     void Render(Shader ourShader, unsigned int& VAO, unsigned int& texture);
-
     void Render(Shader ourShader, Mesh& mesh, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera);
-    void Render(Shader ourShader, Mesh& mesh, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth);
-
     void Render(Shader ourShader, float& deltaTime,std::vector<Mesh> meshes, unsigned int& texture1, unsigned int texture2, int screenHeight, int screenWidth, Camera& camera);
 
 }
