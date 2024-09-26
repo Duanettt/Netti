@@ -1,6 +1,8 @@
 # Netti Studio
 ________
 
+# CURRENTLY UNDERGOING HUGE REBUILD!
+
 **Netti Studios** is a rendering engine currently in development to explore the world of graphics programming
 
 ## Needs implementing
